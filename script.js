@@ -33,6 +33,35 @@ $(document).ready(function() {
     });
 });
 
+/* $(document).ready(function() {
+    // Quando a página carregar, verifique o tamanho da tela e ajuste a visibilidade
+    toggleMenuVisibility();
+
+    $("#btn-hamburguer").on("click", function() {
+        // Mostrar/ocultar o elemento de plano de fundo
+        $("#background-overlay").toggle();
+
+        // Mostrar/ocultar o menu
+        $(".navbar-nav").slideToggle();
+        $("#menu-icon").toggle();
+        $("#close-icon").toggle();
+    });
+
+    $(window).resize(function() {
+        toggleMenuVisibility();
+    });
+});
+
+function toggleMenuVisibility() {
+    if ($(window).width() < 995) {
+        $(".navbar-nav").hide();
+        // Ocultar o elemento de plano de fundo se a tela for pequena
+        $("#background-overlay").hide();
+    } else {
+        $(".navbar-nav").show();
+    }
+} */
+
 function toggleMenuVisibility() {
     if ($(window).width() < 995) {
         $(".navbar-nav").hide();
