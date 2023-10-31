@@ -1,4 +1,4 @@
-window.addEventListener("scroll", function() {
+/* window.addEventListener("scroll", function() {
     var navbar = document.querySelector(".navbar-scroll");
     var section = document.querySelector(".header-home");
 
@@ -8,6 +8,32 @@ window.addEventListener("scroll", function() {
       navbar.classList.remove("bg-white");
     }
 });
+ */
+
+// Menu Hamburguer
+
+$(document).ready(function() {
+    // Quando a página carregar, verifique o tamanho da tela e ajuste a visibilidade
+    toggleMenuVisibility();
+
+    // Quando o botão de hamburguer for clicado
+    $("#btn-hamburguer").on("click", function() {
+        $(".navbar-nav").slideToggle();
+    });
+
+    // Quando a janela for redimensionada
+    $(window).resize(function() {
+        toggleMenuVisibility();
+    });
+});
+
+function toggleMenuVisibility() {
+    if ($(window).width() < 995) {
+        $(".navbar-nav").hide();
+    } else {
+        $(".navbar-nav").show();
+    }
+}
 
 function animateCounter1(element, target) {
     let start = 0;

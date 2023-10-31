@@ -30,6 +30,8 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 		
+		
+		
 		<!-- Style -->
 		<link href="style.css" rel="stylesheet" type="text/css">
 
@@ -42,35 +44,36 @@
 <body>
 	
 	<nav class="navbar navbar-expand-lg position-fixed w-100 navbar-scroll">
-			<div class="container">
-				<a class="navbar-brand" href="#">
-					<img src="imagens/mambubike-logo.svg" alt="Mambubike - Inicial">
-				</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse d-flex justify-content-end" id="navbarText">
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link" href="#">Sobre</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Agenda</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Participe</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Biblioteca</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Contato</a>
-						</li>
-					</ul>
-				</div>
+		<div class="container">
+			<a class="navbar-brand" href="#">
+				<img src="images/mambubike-logo.svg" alt="Mambubike - Inicial">
+			</a>
+			<button class="navbar-toggler" id="btn-hamburguer" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+				<i id="menu-icon" class="bi bi-list"></i>
+				<i id="close-icon" class="bi bi-x" style="display: none;"></i>
+			</button>
+			<div class="navbar-collapse d-flex justify-content-end" id="navbarText">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Sobre</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Agenda</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Participe</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Biblioteca</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contato</a>
+					</li>
+				</ul>
 			</div>
-			
-		</nav>	
+		</div>
+		
+	</nav>	
 	
 	<header class="header-home" id="header"> 
 	 
@@ -194,31 +197,46 @@
     </section>
 
 	<section class="contador">
-		<div class="animacao container text-center">
-			
-			<h4 class="fw-bold mb-5"> Informações ..... </h4>
-
-			<div class="row contador">
-				<div class="col">
-					<h5 class="text-contador">Numero de ciclistas diariamente</h5>
-					<span class="contador-start" data-counter-type="type1" data-scroll="1700">0</span>
-				</div>
-			
-				<div class="col">
-					<h5 class="text-contador">Área da infraestrutura</h5>
-					<span class="contador-start" data-counter-type="type2" data-scroll="20">0</span>
-				</div>
-			</div>			
+		<div class="container text-center">
+			<div class="animacao pt-4">
+				<h3 class="fw-bold mb-4"> Informações ..... </h3>
+	
+				<div class="row">
+					<div class="col">
+						<div class="circle">
+							<img class="img-icon" src="icon/bike.svg" alt="" srcset="">
+						</div>
+						<p class="text-muted mb-1 pt-2">Numero de ciclistas diariamente</p>
+						<span class="contador-start" data-counter-type="type1" data-scroll="1700">0</span>
+					</div>
+					
+					<div class="col">
+						<div class="circle">
+							<img class="img-icon" src="icon/location.svg" alt="" srcset="">
+						</div>
+						<p class="text-muted mb-1 pt-2">Área da infraestrutura</p>
+						<span class="contador-start" data-counter-type="type2" data-scroll="20">0</span>
+					</div>
+				</div>			
+			</div>
 		</div>
 	</section>
 
 	<div class="container-seta">
-		<a href="#" class="seta-up" id="linkSetaUp"><img src="imagens/seta-up.svg" alt="" srcset=""></a>
+		<a href="#" class="seta-up" id="linkSetaUp"><img src="icon/seta-up.svg" alt="" srcset=""></a>
 	</div> 
 
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="script.js"></script>
 
 	<script>
+		document.getElementById("btn-hamburguer").addEventListener("click", function() {
+			var menuIcon = document.getElementById("menu-icon");
+			var closeIcon = document.getElementById("close-icon");
+
+			menuIcon.style.display = (menuIcon.style.display === "none" ? "" : "none");
+			closeIcon.style.display = (closeIcon.style.display === "none" ? "" : "none");
+		});
 		ScrollReveal().reveal('.animacao', {
 			origin: 'up',
 			distance: '20px',

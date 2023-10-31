@@ -32,6 +32,10 @@ body {
 	width: 130px;
 }
 
+.menu-icon {
+  font-weight: bold;
+}
+
 a, a:active, a:focus, a:visited {
 	color: #ff4f40;
 	transition: 0.2s;
@@ -237,11 +241,29 @@ section.apresentacao {
 }
 
 .contador {
-  height: 400px;
-  background:#db392b;
-  color: #fff;
+  height: 200px;
+  background:#fff;
 }
 
-.contador div{
-  padding-top: 35px;
+.circle {
+  width: 60px; /* Largura do círculo */
+  height: 60px; /* Altura do círculo (deve ser igual à largura para criar um círculo) */
+  background-color: transparent; /* Fundo transparente */
+  border: 2px solid #db392b; /* Borda branca */
+  border-radius: 50%; /* Define a forma como círculo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Centralize o círculo horizontalmente */
+}
+
+.circle img {
+  width: 60px; /* Largura da imagem dentro do círculo */
+  height: 40px; /* Altura da imagem dentro do círculo */
+}
+
+.contador-start {
+    font-family: 'Courgette', cursive;
+    font-size: 25px;
+    color: #db392b;
 }
