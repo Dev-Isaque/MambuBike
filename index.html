@@ -96,7 +96,7 @@
 		</div>
 
 	</header>
-	<section class="apresentacao">
+	<section class="apresentacao hidden">
 			<div class="container">
 		<div class="row">
 				<div class="col-md-4">
@@ -115,9 +115,9 @@
 		</div>
 	</section>
 	
-	<section style="background-color: #F0F2F5;">
+	<section class="hidden" style="background-color: #F0F2F5;">
         <div class="container py-5">
-            <div class="main-timeline-2">
+            <div class="main-timeline-2 hidden">
                 <div class="timeline-2 left-2 animacao">
                     <div class="card">
                     <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(135).webp" class="card-img-top"
@@ -132,8 +132,8 @@
                     </div>
                 </div>
                 
-                <div class="timeline-2 right-2 animacao">
-                    <div class="card">
+                <div class="timeline-2 right-2 animacao hidden">
+                    <div class="card avatar">
                     <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(129).webp" class="card-img-top"
                         alt="Responsive image">
                     <div class="card-body p-4">
@@ -148,8 +148,8 @@
                     </div>
                 </div>
 
-                <div class="timeline-2 left-2 animacao">
-                    <div class="card">
+                <div class="timeline-2 left-2 animacao hidden">
+                    <div class="card avatar">
                     <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(131).webp" class="card-img-top"
                         alt="Responsive image">
                     <div class="card-body p-4">
@@ -165,12 +165,12 @@
                     </div>
                 </div>
 
-                <div class="timeline-2 right-2 animacao">
-                    <div class="card">
+                <div class="timeline-2 right-2 animacao hidden">
+                    <div class="card avatar">
                     <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(125).webp" class="card-img-top"
                         alt="Responsive image">
                     <div class="card-body p-4">
-                        <h4 class="fw-bold mb-4"> Quis autem vel eum voluptate</h4>
+                        <h4 class="fw-bold mb-4 text-card"> Quis autem vel eum voluptate</h4>
                         <p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i> 2014</p>
                         <p class="mb-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
                         praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
@@ -180,9 +180,9 @@
                     </div>
                 </div>
 
-                <div class="timeline-2 left-2 animacao">
-                    <div class="card">
-                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(144).webp" class="card-img-top"
+                <div class="timeline-2 left-2 animacao hidden">
+                    <div class="card avatar">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(144).webp" class="card-img-top animacao-delay"
                         alt="Responsive image">
                     <div class="card-body p-4">
                         <h4 class="fw-bold mb-4">Mussum ipsum cacilds</h4>
@@ -198,12 +198,12 @@
         </div>
     </section>
 
-	<section class="contador">
+	<section class="contador hidden">
 		<div class="container text-center">
 			<div class="animacao pt-4">
 				<h3 class="fw-bold mb-4"> Informações ..... </h3>
 	
-				<div class="row">
+				<div class="row animacao-delay">
 					<div class="col">
 						<div class="circle">
 							<img class="img-icon" src="icon/bike.svg" alt="" srcset="">
@@ -232,13 +232,14 @@
 	<script src="script.js"></script>
 
 	<script>
-		ScrollReveal().reveal('.animacao', {
-			origin: 'up',
-			distance: '20px',
-			duration: 800,
-			delay: 300,
-			scale: 1,
-		}); 
+	window.sr = ScrollReveal({reset: true});
+
+	sr.reveal('.text-card', {
+		rotate: {x: 0, y:80, z:0},
+		delay: 300,
+		duration: 2000,
+	})
+
 	</script>
 	
 </body>

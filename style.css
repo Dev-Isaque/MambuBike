@@ -249,6 +249,20 @@ section.apresentacao {
   }
 }
 
+.hidden {
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateX(-100%);
+  transition: all 0s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 1s;
+} 
+
 .container-seta {
   position: fixed;
   right: 40px;
@@ -295,3 +309,6 @@ section.apresentacao {
     color: #db392b;
 }
 
+.card-body :nth-child(1) {
+  transition-delay: 1000ms;
+}
