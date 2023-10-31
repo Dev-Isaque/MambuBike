@@ -32,14 +32,15 @@ body {
 	width: 130px;
 }
 
-.hamburger-button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  margin: 0;
-  font-size: 24px; /* Ajuste o tamanho do ícone conforme necessário */
-  color: #333; /* Cor do ícone */
+#btn-hamburguer {
+
+}
+
+#menu-icon {
+  color: #000;
+  font-size: 25px;
+  font-weight: bold;
+  box-shadow: #000;
 }
 
 a, a:active, a:focus, a:visited {
@@ -273,5 +274,4 @@ section.apresentacao {
     font-size: 25px;
     color: #db392b;
 }
-
 
