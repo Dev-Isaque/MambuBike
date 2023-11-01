@@ -1,68 +1,4 @@
-/* $(() => {
 
-    var BRMaskBehavior = function (val) {
-        return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
-    },
-    spOptions = {
-        onKeyPress: function(val, e, field, options) {
-            field.mask(BRMaskBehavior.apply({}, arguments), options);
-        }
-    }
-
-	$('.telefone').mask(BRMaskBehavior, spOptions)
-	$('.toLowerCase').on('input', function() {
-		this.value = this.value.toLowerCase()
-	})
-
-	'use strict'
-
-	var forms = document.querySelectorAll('.needs-validation')
-
-	Array.prototype.slice.call(forms)
-		.forEach(function (form) {
-			form.addEventListener('submit', function (event) {
-				if (!form.checkValidity()) {
-				event.preventDefault()
-				event.stopPropagation()
-				}
-
-				form.classList.add('was-validated')
-			}, false)
-		})
-
-	/*
-	$('#radioDiversidadeFunc1').on('change', function(){
-		if(this.checked){
-			$("#idDiversidadeFunc").fadeIn(300)
-			$("#idDiversidadeFunc").focus()
-		}else{
-			$("#idDiversidadeFunc").hide().fadeOut()
-			//$("#idDiversidadeFunc").fadeOut()
-		}
-	})
-
-	$('#radioTipoTransporte4').on('change', function(){
-		if(this.checked){
-			$("#ciclistas").fadeIn(300)
-			$("#ciclistas").focus()
-		}else{
-			$("#ciclistas").fadeOut()
-		}
-	})
-	
-}) */
-
-/* window.addEventListener("scroll", function() {
-    var navbar = document.querySelector(".navbar");
-    var section = document.querySelector(".header-home");
-
-    if (section.getBoundingClientRect().bottom <= 0) {
-      navbar.classList.add("bg-white");
-    } else {
-      navbar.classList.remove("bg-white");
-    }
-});
- */
 //////////////// Menu Hamburguer ////////////////
 $(document).ready(function() {
     // Quando a página carregar, verifique o tamanho da tela e ajuste a visibilidade
@@ -94,11 +30,12 @@ var animacao = ScrollReveal();
 // Configuração para cards com animação debaixo para cima
 animacao.reveal('.card-box-bottom', {
     duration: 600,
-    distance: '40px',
+    distance: '50px',
     easing: 'ease-out',
     origin: 'bottom',
     reset: true,
     scale: 1,
+    delay: 250,
     viewFactor: 0,
 });
 
@@ -110,6 +47,7 @@ animacao.reveal('.card-box-left', {
     origin: 'left',
     reset: true,
     scale: 1,
+    delay: 250,
     viewFactor: 0,
 });
 
@@ -121,57 +59,8 @@ animacao.reveal('.card-box-right', {
     origin: 'right',
     reset: true,
     scale: 1,
+    delay: 250,
     viewFactor: 0,
-});
-
-// Use afterReveal para aplicar a animação aos itens dentro dos cards
-function animacaoTextBottom() {
-    animacao.reveal('.card-itens-bottom', {
-        duration: 500,
-        scale: 1,
-        distance: '20px',
-        origin: 'bottom',
-        reset: true,
-        easing: 'ease-out',
-        viewFactor: 1,
-    }, 75);
-}
-
-function animacaoTextLeft() {
-    animacao.reveal('.card-itens-left', {
-        duration: 500,
-        scale: 1,
-        distance: '20px',
-        origin: 'left',
-        reset: true,
-        easing: 'ease-out',
-        viewFactor: 1,
-    }, 75);
-}
-
-function animacaoTextRight() {
-    animacao.reveal('.card-itens-right', {
-        duration: 500,
-        scale: 1,
-        distance: '20px',
-        origin: 'right',
-        reset: true,
-        easing: 'ease-out',
-        viewFactor: 1,
-    }, 75);
-}
-
-// Use eventos de animação para chamar as funções
-document.addEventListener('DOMContentLoaded', function () {
-    animacao.on('reveal', function (domEl) {
-        if (domEl.classList.contains('card-box-bottom')) {
-            animacaoTextBottom();
-        } else if (domEl.classList.contains('card-box-left')) {
-            animacaoTextLeft();
-        } else if (domEl.classList.contains('card-box-right')) {
-            animacaoTextRight();
-        }
-    });
 });
 
 

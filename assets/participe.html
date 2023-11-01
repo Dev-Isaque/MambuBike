@@ -1,7 +1,7 @@
-<!-- <%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
-<!--#include file="../../include/Conn-G.asp"-->
-<!--#include file="../../include/aspjson.asp"-->
- -->
+<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
+#include file="../../include/Conn-G.asp"
+#include file="../../include/aspjson.asp"
+ 
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="style.css" type="text/css">
 </head>
 
-<%
+<!-- <%
 If Request.ServerVariables("REQUEST_METHOD") = "POST" Then
 	vnm_participante 		  			= Trim(Request.Form("txtNome"))
 	vds_email		 		  			= LCase(Trim(Request.Form("txtEmail")))
@@ -152,7 +152,7 @@ If Request.ServerVariables("REQUEST_METHOD") = "POST" Then
 		Response.End
 	End If
 End If
-%>
+%> -->
 
 <body>
 <div class="container">
