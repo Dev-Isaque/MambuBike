@@ -90,44 +90,27 @@ var animacaoTextLeft = animacao.reveal('.card-itens-left', {
 	viewFactor: 1,
 }, 75);
 
-// ERRO GRAVEEEEEEEEEEEEEEEEEE
-/* if(window.innerWidth < 600) {
-   // Remove a classe card-box-right dos elementos com a classe right-2
-  var elementsToRemoveClass = document.querySelectorAll('.right-2');
+ // Configuração para cards com animação a direita //
+ animacao.reveal('.card-box-right', {
+    duration: 600,
+    distance: '100px',
+    easing: 'ease-out',
+    origin: 'right',
+    reset: true,
+    scale: 1,
+    viewFactor: 0,
+    afterReveal: animacaoTextRight,
+}, 150);
 
-  if(elementsToRemoveClass == document.querySelectorAll('.card-box-right')) {
-    elementsToRemoveClass.forsEach(function (element) {
-        element.classList.remove('card-box-right');
-    });
-  } else {
-    elementsToRemoveClass.forsEach(function (element) {
-        element.classList.add('card-box-left');
-    });
-  }
-
-} else {
-    // Configuração para cards com animação a direita //
-    animacao.reveal('.card-box-right', {
-        duration: 600,
-        distance: '100px',
-        easing: 'ease-out',
-        origin: 'right',
-        reset: true,
-        scale: 1,
-        viewFactor: 0,
-        afterReveal: animacaoTextRight,
-    }, 150);
-
-    var animacaoTextRight = animacao.reveal('.card-itens-right', {
-        duration: 500,
-        scale: 1,
-        distance: '20px',
-        origin: 'right',
-        reset: true,
-        easing: 'ease-out',
-        viewFactor: 1,
-    }, 75);
-} */
+var animacaoTextRight = animacao.reveal('.card-itens-right', {
+    duration: 500,
+    scale: 1,
+    distance: '20px',
+    origin: 'right',
+    reset: true,
+    easing: 'ease-out',
+    viewFactor: 1,
+}, 75);
 
 //////////////// Contador ////////////////
 

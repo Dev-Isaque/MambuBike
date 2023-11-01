@@ -30,7 +30,7 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">	
 		<!-- Style -->
-		<link href="style.css" rel="stylesheet" type="text/css">
+		<link href="../style.css" rel="stylesheet" type="text/css">
 
         <!-- Animação Reveal -->
         <script src="https://unpkg.com/scrollreveal"></script>
@@ -41,7 +41,7 @@
 	<nav class="navbar navbar-expand-lg position-fixed w-100 navbar-scroll">
 		<div class="container">
 			<a class="navbar-brand" href="#">
-				<img src="images/mambubike-logo.svg" alt="Mambubike - Inicial">
+				<img src="../images/mambubike-logo.svg" alt="Mambubike - Inicial">
 			</a>
 			<button class="navbar-toggler hamburger-button" id="btn-hamburguer" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
 				<i id="menu-icon" class="bi bi-list custon-icons"></i> <!-- Ícone do menu hamburguer -->
@@ -49,14 +49,17 @@
 			</button>
 			<div class="navbar-collapse d-flex justify-content-end" id="navbarText">
 				<ul class="navbar-nav container-nav-bar">
-					<li class="nav-item">
-						<a class="nav-link" href="#">Sobre</a>
+                    <li class="nav-item">
+						<a class="nav-link" href="../index.asp">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Agenda</a>
+						<a class="nav-link" href="sobre.asp">Sobre</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Participe</a>
+						<a class="nav-link" href="agenda.asp">Agenda</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="participe.asp">Participe</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">Biblioteca</a>
@@ -72,49 +75,23 @@
 	<!-- Elemento de plano de fundo branco -->
 	<div id="background-overlay"></div>
 	
-	<header class="header-home" id="header"> 
-	 
-	 <div class="overlay"></div>
+	<header class="header-home" id="header"></header>
 
-			<!-- The HTML5 video element that will create the background video on the header -->
-			<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-				<source src="https://angra.rj.gov.br/mambubike/images/bike.mp4" type="video/mp4">
-			</video>
-
-			<!-- The header content -->
-			<div class="container h-100">
-				<div class="d-flex h-100 text-center align-items-center">
-					<div class="w-100 text-white">
-						<h1>Mobilidade urbana e estruturação do sistema cicloviário no Parque Mambucaba, em Angra dos Reis </h1>
-					</div>
-				</div>
-		</div>
-
-	</header>
-	<section class="apresentacao">
-		<div class="container card-box-bottom">
-			<div class="row card-box">
-				<div class="col-md-4">
-					<h3>O que é</h3>
-					<p>O MambuBike é um projeto de mobilidade urbana que envolve a estruturação do sistema cicloviário no bairro Parque Mambucaba, em Angra dos Reis (RJ). Sua fase piloto foi desenvolvida ao longo de 2023, em uma parceria entre poder público, terceiro setor e com ações de participação da sociedade civil.</p>
-				</div>
-				<div class="col-md-4">
-					<h3>Quem somos</h3>
-					<p>O MambuBike é uma ação integrada, desenvolvida pela Prefeitura de Angra dos Reis, por meio da Secretaria Executiva de Ordem Pública e Mobilidade Urbana e da Secretaria de Desenvolvimento Regional, com assistência técnica da Iniciativa Mobilidade em Transformação. A Iniciativa é composta pelas organizações Cidade Ativa e Fundação Grupo Volkswagen, e contou com parcerias especializadas em diversas etapas de implementação do MambuBike.</p>
-				</div>
-				<div class="col-md-4">
-					<h3>Objetivo</h3>
-					<p>O bairro Parque Mambucaba conta com um número expressivo de ciclistas que utilizam a bicicleta como principal meio de circulação no seu cotidiano. O objetivo central do projeto é oferecer infraestrutura adequada para o deslocamento dos ciclistas, proporcionando segurança e conforto para todos os usuários, além de melhorar a integração com o transporte coletivo. Junto ao desenvolvimento do projeto urbano, diversas ações de engajamento foram programadas, visando ouvir a opinião das pessoas mais impactadas e exercitar a </p>
+	<section class="nome-projeto">
+		<div class="container h-100">
+			<div class="d-flex h-100 text-center align-items-center">
+				<div class="w-100">
+					<h1>Mobilidade urbana e estruturação do sistema cicloviário no Parque Mambucaba, em Angra dos Reis </h1>
 				</div>
 			</div>
 		</div>
-		
 	</section>
 	
 	<section style="background-color: #F0F2F5;">
         <div class="container py-5 ">
-            <div class="main-timeline-2 card-box-left">
-                <div class="timeline-2 left-2 animacao hidden">
+            <div class="main-timeline-2">
+
+                <div class="timeline-2 left-2 animacao hidden card-box-left">
                     <div class="card">
                     <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(135).webp" class="card-img-top "
                         alt="Responsive image">
@@ -194,38 +171,12 @@
         </div>
     </section>
 
-	<section class="contador ">
-		<div class="container text-center">
-			<div class="pt-4 card-box-bottom">
-				<h3 class="fw-bold mb-4 card-title-bottom"> Informações ..... </h3>
-	
-				<div class="row ">
-					<div class="col">
-						<div class="circle card-itens-bottom">
-							<img class="img-icon" src="icon/bike.svg" alt="" srcset="">
-						</div>
-						<p class="text-muted mb-1 pt-2 card-itens-bottom">Numero de ciclistas diariamente</p>
-						<span class="contador-start card-itens-bottom" data-counter-type="type1" data-scroll="1700">0</span>
-					</div>
-					
-					<div class="col">
-						<div class="circle card-itens-bottom">
-							<img class="img-icon" src="icon/location.svg" alt="" srcset="">
-						</div>
-						<p class="text-muted mb-1 pt-2 card-itens-bottom">Área da infraestrutura</p>
-						<span class="contador-start card-itens-bottom" data-counter-type="type2" data-scroll="20">0</span>
-					</div>
-				</div>			
-			</div>
-		</div>
-	</section>
-
 	<div class="container-seta">
-		<a href="#" class="seta-up" id="linkSetaUp"><img src="icon/seta-up.svg" alt="" srcset=""></a>
+		<a href="#" class="seta-up" id="linkSetaUp"><img src="../icon/seta-up.svg" alt="" srcset=""></a>
 	</div> 
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="script.js"></script>
+	<script src="../scripts.js"></script>
 	<script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
 	<script>
 		var ht = new HT({
