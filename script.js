@@ -1,3 +1,4 @@
+//////////////// Deixa o bg aparecendo ou não ////////////////
 window.addEventListener("scroll", function() {
     var navbar = document.querySelector(".navbar-scroll");
     var section = document.querySelector(".header-home");
@@ -9,7 +10,7 @@ window.addEventListener("scroll", function() {
     }
 });
 
-// Menu Hamburguer
+//////////////// Menu Hamburguer ////////////////
 $(document).ready(function() {
     // Quando a página carregar, verifique o tamanho da tela e ajuste a visibilidade
     toggleMenuVisibility();
@@ -70,6 +71,78 @@ function toggleMenuVisibility() {
     }
 }
 
+//////////////// Animação das Paginas ////////////////
+window.animacao = ScrollReveal();
+
+// Configuração para cards com animação debaixo para cima //
+animacao.reveal('.card-box-bottom', {
+    duration: 600,
+	distance: '40px',
+	easing: 'ease-out',
+	origin: 'bottom',
+	reset: true,
+	scale: 1,
+	viewFactor: 0,
+	afterReveal: animacaoTextBottom,
+})
+
+var animacaoTextBottom = animacao.reveal('.card-itens-bottom', {
+	duration: 500,
+	scale: 1,
+	distance: '20px',
+	origin: 'bottom',
+	reset: true,
+	easing: 'ease-out',
+	viewFactor: 1,
+}, 75);
+	
+
+// Configuração para cards com animação a esquerda //
+animacao.reveal('.card-box-left', {
+	duration: 600,
+	distance: '100px',
+	easing: 'ease-out',
+	origin: 'left',
+	reset: true,
+	scale: 1,
+	viewFactor: 0,
+	afterReveal: animacaoTextLeft,
+}, 150);
+
+var animacaoTextLeft = animacao.reveal('.card-itens-left', {
+	duration: 500,
+	scale: 1,
+	distance: '20px',
+	origin: 'left',
+	reset: true,
+	easing: 'ease-out',
+	viewFactor: 1,
+}, 75);
+
+ // Configuração para cards com animação a direita //
+ animacao.reveal('.card-box-right', {
+    duration: 600,
+    distance: '100px',
+    easing: 'ease-out',
+    origin: 'right',
+    reset: true,
+    scale: 1,
+    viewFactor: 0,
+    afterReveal: animacaoTextRight,
+}, 150);
+
+var animacaoTextRight = animacao.reveal('.card-itens-right', {
+    duration: 500,
+    scale: 1,
+    distance: '20px',
+    origin: 'right',
+    reset: true,
+    easing: 'ease-out',
+    viewFactor: 1,
+}, 75);
+
+//////////////// Contador ////////////////
+
 function animateCounter1(element, target) {
     let start = 0;
     element.textContent = "0 km"; 
@@ -114,8 +187,7 @@ const observer = new IntersectionObserver(entries => {
     });
 });
 
-
-/// Inicializa os contadores quando a página carregar
+// Inicializa os contadores quando a página carregar //
 window.addEventListener("load", function() {
     const counters = document.querySelectorAll(".contador-start");
     counters.forEach(counter => {
