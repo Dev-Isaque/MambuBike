@@ -17,14 +17,15 @@ body {
 .navbar {
 	padding-top: 0;
 	padding-bottom: 0;
-	height: 100px;
+	height: 80px;
 	background: #fff;
+	/* background: red; */
 	z-index: 15;
 	top: 0;
 }
 
 .navbar-brand img {
-	width: 130px;
+	width: 100px;
 }
 
 .custon-icon {
@@ -37,18 +38,6 @@ body {
 .navbar-nav {
   background-color: transparent; /* Cor de fundo inicial */
   position: relative; /* Para posicionar o overlay dentro da navbar */
-}
-
-.navbar-nav::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0); /* Cor de fundo transparente (invisível inicialmente) */
-  z-index: -1; /* Coloque o overlay atrás das <li> e da <ul> */
-  transition: background-color 0.3s; /* Adicione uma transição suave para o efeito */
 }
 
 .navbar-toggler.hamburger-button:focus + .navbar-collapse .navbar-nav::before {
@@ -75,37 +64,15 @@ a.nav-link {
 	padding-right: 15px !important;
 }
 
-
-/* .header-home {
-  position: relative;
-  background-color: black;
-  height: 70vh;
-  min-height: 25rem;
-  width: 100%;
-  overflow: hidden;
-} */
-
-/* .header-home img {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-} */
-
 .header-home {
-  padding-top: 42%;
+  margin-left: 20%;
+  width: 60%;
   position: relative;
-  height: 50vh; /* Defina a altura desejada para o cabeçalho */
-  background-image: url('images/wallpaper-home.png'); /* Substitua pelo caminho da sua imagem */
-  background-size: cover;
+  min-height: 500px; /* Defina a altura desejada para o cabeçalho */
+  background-image: url('images/wallpaper-home1.png'); 
+  background-color: #fff;
+  background-size: 100%;
+  background-repeat: no-repeat;
   background-position: center;
 }
 
@@ -296,7 +263,7 @@ section.apresentacao {
   }
 }
 
-@media screen and (max-width: 996px) { 
+@media screen and (max-width: 992px) { 
 /*   .navbar {
     padding-top: 0;
     padding-bottom: 0;
@@ -305,4 +272,7 @@ section.apresentacao {
     z-index: 15;
     top: 0;
   } */
+  .navbar-brand img {
+    margin-top: -15px;
+  }
 }
