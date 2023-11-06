@@ -99,7 +99,6 @@ animacao.reveal('.card-box-left', {
     easing: 'ease-out',
     origin: 'left',
     scale: 1,
-    reset: true, 
     viewFactor: 0,
 });
 
@@ -110,7 +109,6 @@ animacao.reveal('.card-box-right', {
     easing: 'ease-out',
     origin: 'right',
     scale: 1,
-    reset: true, 
     viewFactor: 0,
 });
 
