@@ -58,7 +58,6 @@ $(document).ready(function() {
     // Quando a página carregar, verifique o tamanho da tela e ajuste a visibilidade
     toggleMenuVisibility();
 
-    
     $("#btn-hamburguer").on("click", function() {
         var $navbar = $(".navbar-nav");
         if ($navbar.hasClass("navbar-active")) {
@@ -79,6 +78,7 @@ $(document).ready(function() {
     $(window).resize(function() {
         toggleMenuVisibility();
     });
+
 
     function toggleMenuVisibility() {
          if ($(window).width() < 995) {

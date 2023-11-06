@@ -253,11 +253,24 @@ section.sobre {
 } 
 
 .navbar-active {
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
   z-index: 999;
   width: 100%;
   height: calc(100vh - 80px);
-  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.navbar-active ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-active li {
+  padding-top: -40px;
+  margin: 10px; 
 }
 
 .text-projeto2 img {
