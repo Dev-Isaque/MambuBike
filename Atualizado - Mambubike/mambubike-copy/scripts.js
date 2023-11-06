@@ -58,24 +58,37 @@ $(document).ready(function() {
     // Quando a página carregar, verifique o tamanho da tela e ajuste a visibilidade
     toggleMenuVisibility();
 
+    
     $("#btn-hamburguer").on("click", function() {
-        $(".navbar-nav").slideToggle();
-        $("#menu-icon").toggle();
-        $("#close-icon").toggle();
+        var $navbar = $(".navbar-nav");
+        if ($navbar.hasClass("navbar-active")) {
+            $navbar.removeClass('navbar-active');
+            // Remova a classe 'navbar-active' imediatamente
+            // sem animação de delay
+            $navbar.css('display', 'none');
+            $("#menu-icon").show();
+            $("#close-icon").hide();
+        } else {
+            $navbar.addClass('navbar-active');
+            $navbar.slideDown();
+            $("#menu-icon").hide();
+            $("#close-icon").show();
+        }
     });
 
     $(window).resize(function() {
         toggleMenuVisibility();
     });
-});
 
-function toggleMenuVisibility() {
-    if ($(window).width() < 995) {
+    function toggleMenuVisibility() {
+         if ($(window).width() < 995) {
         $(".navbar-nav").hide();
     } else {
+       
         $(".navbar-nav").show();
     }
-}
+    }
+});
 
 //////////////// Animação das Paginas ////////////////
 // Inicialize o ScrollReveal
@@ -88,7 +101,6 @@ animacao.reveal('.card-box-bottom', {
     easing: 'ease-out',
     origin: 'bottom',
     scale: 1,
-    reset: true, 
     viewFactor: 0,
 });
 

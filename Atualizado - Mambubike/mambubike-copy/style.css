@@ -114,7 +114,7 @@ section.sobre {
   position: fixed;
   right: 40px;
   bottom: 40px;
-  z-index: 999;
+  z-index: 998;
   width: 50px;
   height: 50px; 
   background-color: #26c6da; 
@@ -251,6 +251,14 @@ section.sobre {
 .text-projeto1 img {
   width: 100%;
 } 
+
+.navbar-active {
+  background: white;
+  z-index: 999;
+  width: 100%;
+  height: calc(100vh - 80px);
+  padding-top: 80px;
+}
 
 .text-projeto2 img {
   width: 100%;
