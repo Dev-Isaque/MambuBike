@@ -274,7 +274,7 @@ section.sobre {
 .contact h3{
   font-size: 2.5em;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #fff;
   text-transform: uppercase;
   margin: 0 auto;
   border-bottom: 2px solid white;
@@ -286,7 +286,7 @@ section.sobre {
 .contact p{
 	font-size:1.2em;
 	font-weight:400;
-	color: #ff6f5c;
+	color: #fff;
 	margin:1em 0em 4em;
 	text-align:center;
 }
