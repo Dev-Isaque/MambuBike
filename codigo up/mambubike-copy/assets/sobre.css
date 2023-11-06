@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+:root {
+    --cinza: #647c84;
+    --laranja: #fb5141;
+    --verde: #04bc04;
+    --azul: #057cc4;
+    --cinza-claro: #e1d6d5;
+}
+
+div.moldura {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+    backdrop-filter: blur(5px);
+    text-align: justify;
+    padding: 5vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-indent: 5rem;
+    box-sizing: content-box;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 186, 255, 0.3);
+}
+
+div.moldura > h3 {
+    position: relative;
+    left: -5vh;
+    font-size: calc(1.375rem + 1.5vw);
+    background-color: var(--laranja);
+    color: white;
+    width: calc(100% + 10vh);
+    text-indent: 0;
+    text-align: center;
+}
+
+div.moldura > p {
+    font-size: 1em;
+}
