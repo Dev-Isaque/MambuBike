@@ -246,32 +246,11 @@ section.sobre {
   left: -14px;
 }
 
-/*//////////////////  pagina PROJETo  //////////////////*/
+/*//////////////////  pagina PROJETO  //////////////////*/
 
 .text-projeto1 img {
   width: 100%;
 } 
-
-.navbar-active {
-  background: rgba(255, 255, 255, 0.9);
-  z-index: 999;
-  width: 100%;
-  height: calc(100vh - 80px);
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-}
-
-.navbar-active ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.navbar-active li {
-  padding-top: -40px;
-  margin: 10px; 
-}
 
 .text-projeto2 img {
   width: 100%;
@@ -326,6 +305,29 @@ section.sobre {
     z-index: 15;
     top: 0;
   } 
+
+  /* Navbar Menu Hmaburguer Mobile */
+
+  .navbar-active {
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 999;
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+  
+  .navbar-active ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar-active li {
+    padding-top: -40px;
+    margin: 10px; 
+  }
   .navbar-brand img {
     margin-top: -15px;
   }
