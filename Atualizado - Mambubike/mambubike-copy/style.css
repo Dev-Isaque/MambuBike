@@ -161,9 +161,15 @@ section.sobre {
   transition-delay: 1000ms;
 }
 
-.card img {
-  max-width: 650px;
-} 
+.imagem-card {
+  width: 100%;
+  height: 280px; 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
 
 /*    TIME-LINE     */
 
@@ -171,6 +177,8 @@ section.sobre {
 .main-timeline-2 {
   position: relative;
 }
+
+
 
 
 /* The actual timeline (the vertical ruler) */
@@ -278,7 +286,7 @@ section.sobre {
   text-transform: uppercase;
   margin: 0 auto;
   border-bottom: 2px solid white;
-  width: 520px;
+  max-width: 520px;
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
