@@ -1,7 +1,3 @@
-<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
-<!--#include file="../../include/Conn-G.asp"-->
-<!--#include file="../../include/aspjson.asp"-->
-
 <!doctype html>
 <html lang="pt-br">
 	<head>
@@ -40,146 +36,6 @@
         <script src="https://unpkg.com/scrollreveal"></script>
 	</head>
 
-	<%
-If Request.ServerVariables("REQUEST_METHOD") = "POST" Then
-	vnm_participante 		  			= Trim(Request.Form("txtNome"))
-	vds_email		 		  			= LCase(Trim(Request.Form("txtEmail")))
-	vds_faixa_etaria 		  			= Request.Form("radioFaixaEtaria")
-	vds_genero		 		  			= Request.Form("radioGenero")
-	vds_escolaridade 		  			= Request.Form("radioEscolaridade")
-	vds_cor			 		  			= Request.Form("radioCor")
-	vid_bairro		 		  			= Request.Form("SelBairro")
-	vsn_diversidade_funcional 			= Request.Form("radioDiversidadeFunc")
-	vds_diversidade_funcional 			= Request.Form("txtDiversidadeFunc")
-	vnr_telefone			  			= Request.Form("txtTelefone")
-	vds_tipo_transporte		  			= Request.Form("radioTipoTransporte")
-	vds_tipo_transporte_outro 			= Request.Form("txtTipoTransporteOutros")
-	vsn_sente_seguro		  			= Request.Form("radioSenteSeguro")
-	vds_sente_seguro		  			= Request.Form("txtSenteSeguro")
-	vds_transportes_utiliza	  			= Request.Form("chkTransportesUtiliza")
-	vds_transportes_utiliza_outros  	= Request.Form("txtTransportesUtilizaOutros")
-	vsn_sente_seguro_transportes		= Request.Form("radioSenteSeguroTransp")
-	vds_sente_seguro_transportes		= Request.Form("txtSenteSeguroTransp")
-	vds_sai_atividades					= Request.Form("txtSaiBairroAtividades")
-	vds_qts_dias_semana					= Request.Form("radioQtsDiasSemana")
-	vds_tipo_transp_mais_utiliza		= Request.Form("radioTranspMaisUtiliza")
-	vds_tipo_transp_mais_utiliza_outros	= Request.Form("txtTranspMaisUtiliza")
-	vds_melhorar_a_pe					= Request.Form("txtMelhorarApe")
-	vds_melhorar_bicicleta				= Request.Form("txtMelhorarBicicleta")
-	vds_melhorar_transp_publico			= Request.Form("txtMelhorarTranspPublico")
-	vds_melhorar_transp_individual		= Request.Form("txtMelhorarTranspIndividual")
-
-	vds_bicicleta_dias_uso				= Request.Form("radioBicicletaDiasUso")
-	vds_bicicleta_motivo_viagem			= Request.Form("chkBicicletaMotivoViagem")
-	vds_bicicleta_motivo_viagem_outro	= Request.Form("txtBicicletaMotivoViagemOutro")
-
-	vds_bicicleta_qtas_pessoas			= Request.Form("radioQtdPessoas")
-	vsn_bicicleta_inst_trabalho			= Request.Form("radioBicicletaInstTrabalho")
-	vds_bicicleta_motivo_uso			= Request.Form("chkBicicletaMotivoUso")
-	vds_bicicleta_motivo_uso_outros		= Request.Form("txtBicicletaMotivoUsoOutros")
-
-	vds_bicicleta_desafios_uso			= Request.Form("chkBicicletaDesafiosUso")
-	vds_bicicleta_desafios_uso_outro	= Request.Form("txtBicicletaDesafiosUsoOutro")
-
-	vds_bicicleta_tempo_medio			= Request.Form("txtBicicletaTempoMedio")
-
-	vsn_ocorrencia_acidente				= Request.Form("radioOcorrenciaAcidente")
-	vds_descricao_ocorrencia			= Request.Form("txtDescricaoOcorrencia")
-	vds_local_ocorrencia				= Request.Form("txtLocalOcorrencia")
-
-	vsn_transp_associado				= Request.Form("radioUsoAssociadaOutroTransp")
-	vds_transp_associado				= Request.Form("chkUsoOutroTransp")
-	vds_transp_associado_outros			= Request.Form("txtUsoOutrosTransp")
-	vds_vias_prioritarias				= Request.Form("txtViasPrioritarias")
-	vds_sugestoes_mobilidade			= Request.Form("txtSugestoesMobilidade")
-
-	If vnm_participante <> "" AND vds_email <> "" Then
-		vSql = "INSERT INTO TB_PMAR_SEOPM_QUESTIONARIO_MAMBUBIKE_2023 (nm_participante,ds_faixa_etaria,ds_genero,ds_escolaridade,ds_cor,id_bairro,sn_diversidade_funcional,ds_diversidade_funcional,nr_telefone " &_
-				",ds_email,ds_tipo_transporte,ds_tipo_transporte_outro,sn_sente_seguro,ds_sente_seguro,ds_transportes_utiliza,ds_transportes_utiliza_outros,sn_sente_seguro_transportes,ds_sente_seguro_transportes " &_
-				",ds_sai_atividades,ds_qts_dias_semana,ds_tipo_transp_mais_utiliza,ds_tipo_transp_mais_utiliza_outros,ds_melhorar_a_pe,ds_melhorar_bicicleta,ds_melhorar_transp_publico,ds_melhorar_transp_individual,ds_bicicleta_dias_uso " &_
-				",ds_bicicleta_motivo_viagem,ds_bicicleta_motivo_viagem_outro,ds_bicicleta_qtas_pessoas,sn_bicicleta_inst_trabalho,ds_bicicleta_motivo_uso,ds_bicicleta_motivo_uso_outro,ds_bicicleta_desafios_uso_outro " &_
-				",ds_bicicleta_desafios_uso,ds_bicicleta_tempo_medio,sn_ocorrencia_acidente,ds_descricao_ocorrencia,ds_local_ocorrencia,sn_transp_associado,ds_transp_associado,ds_transp_associado_outros,ds_vias_prioritarias,ds_sugestoes_mobilidade) " &_
-				"VALUES ('" & vnm_participante &_
-				"','" & vds_faixa_etaria &_
-				"','" & vds_genero &_
-				"','" & vds_escolaridade &_
-				"','" & vds_cor &_
-				"'," & vid_bairro &_
-				",'" & vsn_diversidade_funcional &_
-				"','" & vds_diversidade_funcional &_
-				"','" & vnr_telefone &_
-				"','" & vds_email &_
-				"','" & vds_tipo_transporte &_
-				"','" & vds_tipo_transporte_outro &_
-				"','" & vsn_sente_seguro &_
-				"','" & vds_sente_seguro &_
-				"','" & vds_transportes_utiliza &_
-				"','" & vds_transportes_utiliza_outros &_
-				"','" & vsn_sente_seguro_transportes &_
-				"','" & vds_sente_seguro_transportes &_
-				"','" & vds_sai_atividades &_
-				"','" & vds_qts_dias_semana &_
-				"','" & vds_tipo_transp_mais_utiliza &_
-				"','" & vds_tipo_transp_mais_utiliza_outros &_
-				"','" & vds_melhorar_a_pe &_
-				"','" & vds_melhorar_bicicleta &_
-				"','" & vds_melhorar_transp_publico &_
-				"','" & vds_melhorar_transp_individual &_
-				"','" & vds_bicicleta_dias_uso &_
-				"','" & vds_bicicleta_motivo_viagem &_
-				"','" & vds_bicicleta_motivo_viagem_outro &_
-				"','" & vds_bicicleta_qtas_pessoas &_
-				"','" & vsn_bicicleta_inst_trabalho &_
-				"','" & vds_bicicleta_motivo_uso &_
-				"','" & vds_bicicleta_motivo_uso_outro &_
-				"','" & vds_bicicleta_desafios_uso_outro &_
-				"','" & vds_bicicleta_desafios_uso &_
-				"','" & vds_bicicleta_tempo_medio &_
-				"','" & vsn_ocorrencia_acidente &_
-				"','" & vds_descricao_ocorrencia &_
-				"','" & vds_local_ocorrencia &_
-				"','" & vsn_transp_associado &_
-				"','" & vds_transp_associado &_
-				"','" & vds_transp_associado_outros &_
-				"','" & vds_vias_prioritarias &_
-				"','" & vds_sugestoes_mobilidade & "')"
-		Set myRst = Server.CreateObject("ADODB.Recordset")
-		SqlExecute myRst, vSql
-
-		vStrg = "<html><body>" &_
-				"<h1>QUESTIONÁRIO RECEBIDO</h1>" &_
-				"<p>Obrigado pela sua participação!.</p>" &_
-				"</body></html>"
-		'----------------- cdossys ----------------------- 
-		Dim ObjSendMail
-		Set ObjSendMail = CreateObject("CDO.Message")
-		ObjSendMail.Configuration.Fields.Item ("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2
-		ObjSendMail.Configuration.Fields.Item ("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "webmail.angra.rj.gov.br"
-		ObjSendMail.Configuration.Fields.Item ("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 465
-		ObjSendMail.Configuration.Fields.Item ("http://schemas.microsoft.com/cdo/configuration/smtpusessl") = 1
-		ObjSendMail.Configuration.Fields.Item ("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
-
-		ObjSendMail.Configuration.Fields.Item ("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
-		ObjSendMail.Configuration.Fields.Item ("http://schemas.microsoft.com/cdo/configuration/sendusername") ="site1@angra.rj.gov.br"
-		ObjSendMail.Configuration.Fields.Item ("http://schemas.microsoft.com/cdo/configuration/sendpassword") ="LantraEquipe171?"
-		ObjSendMail.Configuration.Fields.Update
-		ObjSendMail.To = vds_email
-		ObjSendMail.Subject = "Confirmação de participação - Questionário Mambubike 2023"
-		ObjSendMail.From = "site1@angra.rj.gov.br"
-		'ObjSendMail.Bcc= "site@angra.rj.gov.br"
-		ObjSendMail.ReplyTo = "site1@angra.rj.gov.br"
-		ObjSendMail.HTMLBody = vStrg
-		ObjSendMail.Send
-
-		Set myRst = Nothing
-		Set ObjSendMail = Nothing
-
-		Response.Write("<script>alert('Questionário enviado com sucesso! Obrigado pela sua participação.');location.href='/mambubike/'</script>")
-		Response.End
-	End If
-End If
-%>
-
 	<body>
 		
 		<nav class="navbar navbar-expand-lg position-fixed w-100 navbar-scroll">
@@ -194,13 +50,13 @@ End If
 				<div class="navbar-collapse d-flex justify-content-end" id="navbarText">
 					<ul class="navbar-nav container-nav-bar">
 						<li class="nav-item">
-							<a class="nav-link" href="../index.asp">Home</a>
+							<a class="nav-link" href="../index.html">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="sobre.asp">Sobre</a>
+							<a class="nav-link" href="sobre.html">Sobre</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link disabled" href="agenda.asp">Agenda</a>
+							<a class="nav-link disabled" href="agenda.html">Agenda</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#">Participe</a>
@@ -210,12 +66,12 @@ End If
 							<ul class="dropdown-menu" aria-labelledby="bibliotecaDropdown">
 								<li><a class="dropdown-item disabled" href="#">Glossário</a></li>
 								<li><a class="dropdown-item disabled" href="#">Relatórios</a></li>
-								<li><a class="dropdown-item" href="projeto.asp">Projeto</a></li>
+								<li><a class="dropdown-item" href="projeto.html">Projeto</a></li>
 								<li><a class="dropdown-item disabled" href="#">Galeria de fotos</a></li>
 							</ul>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="contato.asp">Contato</a>
+							<a class="nav-link" href="contato.html">Contato</a>
 						</li>
 					</ul>
 				</div>
