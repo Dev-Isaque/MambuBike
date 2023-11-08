@@ -125,7 +125,7 @@ section.sobre {
 .container-seta {
   position: fixed;
   right: 40px;
-  bottom: 40px;
+  bottom: 60px;
   z-index: 998;
   width: 50px;
   height: 50px; 
@@ -189,10 +189,15 @@ div.moldura {
 div.moldura > h3 {
     position: relative;
     left: -5vh;
-    font-size: calc(1.375rem + 1.5vw);
+    width: calc(100% + 10vh);
+    margin-top: -35px;
+    padding: 1.5vh;
+    border-radius: 15px 15px 0px 0px;
+
     background-color: var(--laranja);
     color: var(--branco);
-    width: calc(100% + 10vh);
+
+    font-size: calc(1.375rem + 1.5vw);
     text-indent: 0;
     text-align: center;
 }
@@ -316,7 +321,7 @@ h6 {
 
 #ciclistas-header {
   margin-left: -5vh;
-  background-color: #52AB52;
+  background-color: #ff4f40;
   border-radius: 25px 25px 0px 0px;
 }
 
@@ -326,7 +331,7 @@ h6 {
   margin-bottom: -5vh;
   padding-left: 5vh;
   border-radius: 25px 25px 0px 0px;
-  background-color: #77f777ba;
+  background-color: #ff473861;
 }
 
 #ciclistas-header > h5, #ciclistas-header p {
@@ -410,7 +415,7 @@ div.btn > input:hover {
 }
 /*//////// PAGINA ( CONTATO ) ////////*/
 section.contact{
-	background: #647c84;
+	background: white;
   padding-top: 25vh;
   padding-bottom: 120px;
 	overflow: hidden;
@@ -420,10 +425,10 @@ section.contact{
 .contact h3{
   font-size: 2.5em;
   font-weight: 400;
-  color: var(--branco);
+  color: #ff6f5c;
   text-transform: uppercase;
   margin: 0 auto;
-  border-bottom: 2px solid var(--branco);
+  border-bottom: 2px solid #ff6f5c;
   max-width: 520px;
   font-family: inherit;
   font-weight: 500;
@@ -433,14 +438,50 @@ section.contact{
 .contact p{
 	font-size:1.2em;
 	font-weight:400;
-	color: var(--branco);
+	color: #ff6f5c;
 	margin:1em 0em 4em;
 	text-align:center;
 }
 
 .container-contato{
-    width: 100%;
-    height: 50vh;
+  width: 100%;
+  height: 70vh;
+  background-color: white;
+}
+
+.conteudo-form {
+  margin-top: -4%;
+  margin-bottom: 5%;
+}
+
+div.agrupar-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25vh;
+}
+
+section.forms {
+  margin-left: -15vh;
+}
+
+.form-contato {
+  width: 150%;
+  height: 6vh;
+  margin-bottom: 5px;
+  border: 2px solid rgb(83 76 76);
+}
+
+.form-contato-txt {
+  width: 200%;
+  height: 27vh;
+  margin-top: 25px;
+  border: 2px solid rgb(83 76 76);
+}
+
+div.btao {
+  display: flex;
+  justify-content: space-around;
 }
 
 .btn-contato {

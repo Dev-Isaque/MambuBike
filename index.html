@@ -62,9 +62,10 @@
 			}
 
 			footer h5 {
-				border-bottom: 2px solid white;
-				padding-bottom: 5px;
-				margin-bottom: 30px;
+				/* border-bottom: 2px solid white; */
+				font-size: 15px;
+				margin-bottom: 3%;
+				margin-top: 7%;
 			}
 
 			footer p {
@@ -73,9 +74,15 @@
 			}
 
 			footer div.bg-logo {
+				display: flex;
 				background-color: white;
 				width: 200px;
 				border-radius: 50%;
+				justify-content: center;
+				align-items: center;
+				/* position: relative;
+				left: 250px;
+				top: 30px; */
 			}
 
 			footer img {
@@ -86,16 +93,21 @@
 				color: white;
 			}
 
-			footer a:active {
+			footer a:hover {
 				color: yellow;
 			}
 
 			footer a:focus {
-				color: green;
+				color: gray;
 			}
 
 			footer a:visited {
 				color: white;
+			}
+
+			.txt-footer {
+				border-top: 2px solid white;
+    			margin: 5px 50px;
 			}
 
 			
@@ -236,9 +248,11 @@
                 </div> -->
 
 
-                <div class=" col-sm-3 col-md-3 col-12 col text-center bg-logo">
-                    <img src="images/Logo-prefeitura-footer.png" style="height: 100px; width: auto" alt="">
+                <div class="col-sm-3 col-md-3 col-12 col text-center bg-logo ml-auto">
+                <div style="width: 200px; border-radius: 50%;">
+                    <img src="images/Logo-prefeitura-footer.png" style="height: 100px; width: auto;" alt="">
                 </div>
+            </div>
             </div>
         </div>
 
@@ -247,7 +261,7 @@
 
             <br>
             
-            <p class="text-center">Secretaria executiva de ordem pública e mobilidade Urbana</p>
+            <p class="text-center txt-footer">Secretaria executiva de ordem pública e mobilidade Urbana</p>
             <!--social_footer_ul ends here-->
         
 
