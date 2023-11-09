@@ -420,7 +420,8 @@ section.contact {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  margin-top: 10rem;
+  height: 50vh;
   padding: 0;
 }
 
@@ -629,7 +630,7 @@ footer a:hover, footer a:focus {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 770px) {
   .main-timeline-2::after {
     left: 31px;
   }
@@ -670,6 +671,11 @@ footer a:hover, footer a:focus {
     align-items: center;
     gap: 0;
     width: 98vh;
+  }
+
+  section.contact {
+    padding-top: 18rem;
+    padding-bottom: 22rem;
   }
 
   footer div.bg-logo {

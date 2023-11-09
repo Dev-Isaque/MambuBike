@@ -37,6 +37,82 @@
 
         <!-- Animação Reveal -->
         <script src="https://unpkg.com/scrollreveal"></script>
+
+		<style>
+			div.conteudo {
+				display: flex;
+				justify-content: space-evenly;
+				gap: 10px;
+			}
+
+			div.texto {
+				width: 350px;
+				height: 450px;
+				text-align: justify;
+				/* border: 1px solid black; */
+			}
+
+			footer {
+				margin-top: 100px;
+				width: 100%;
+				background-color: #db392b;
+				min-height: 250px;
+				padding: 10px 0px 25px 0px;
+				color: white;
+			}
+
+			footer h5 {
+				/* border-bottom: 2px solid white; */
+				font-size: 15px;
+				margin-bottom: 3%;
+				margin-top: 7%;
+			}
+
+			footer p {
+				font-size: 12px;
+				margin-bottom: 2px;
+			}
+
+			footer div.bg-logo {
+				display: flex;
+				width: 130px;
+				height: 130px;
+				background-color: white;
+				border-radius: 50%;
+				justify-content: center;
+				align-items: center;
+				/* position: relative;
+				left: 250px;
+				top: 30px; */
+			}
+
+			footer img {
+				background-color: rgba(255, 255, 255, 0);
+			}
+
+			footer a {
+				color: white;
+			}
+
+			footer a:hover {
+				color: yellow;
+			}
+
+			footer a:focus {
+				color: gray;
+			}
+
+			footer a:visited {
+				color: white;
+			}
+
+			.txt-footer {
+				border-top: 2px solid white;
+    			margin: 5px 50px;
+			}
+
+			
+		</style>
 	</head>
 
 <body>
@@ -62,7 +138,7 @@
 						<a class="nav-link disabled" href="assets/agenda.asp">Agenda</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link disabled" href="assets/participe.asp">Participe</a>
+						<a class="nav-link" href="assets/participe.asp">Participe</a>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle"  href="" id="bibliotecaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Biblioteca</a>
@@ -127,14 +203,14 @@
 							<img class="img-icon" src="icon/bike.svg" srcset="">
 						</div>
 						<span class="contador-start card-box-bottom" data-counter-type="type1" data-scroll="100">0</span>
-						<p class="text-muted mb-1 pt-2 card-box-bottom">Paraciclos instalados</p>
+						<p class="text-muted mb-1 pt-2 card-box-bottom">Paraciclos a serem instalados</p>
 					</div>
 					
 					<div class="col">
 						<div class="circle card-itens-bottom">
 							<img class="img-icon" src="icon/location.svg" srcset="">
 						</div>
-						<span class="contador-start card-box-bottom" data-counter-type="type2" data-scroll="2,3">0</span>
+						<span class="contador-start card-box-bottom" data-counter-type="type2" data-scroll="2.3">0</span>
 						<p class="text-muted mb-1 pt-2 card-box-bottom">Instraestrutura cicloviária</p>
 					</div>
 				</div>			

@@ -88,33 +88,35 @@
 		<div class="container container-contato">
 			<h3 class="text-center">Formulário de contato</h3>
 			<p class="text-center">Envie sua contribuição, dúvida, crítica ou sugestão.</p>
-			<div class="row">
-				<div class="col-md-6">
-					<form>
-						<div class="mb-3">
-							<label for="nome" class="form-label">Nome:</label>
-							<input type="text" class="form-control" id="nome" placeholder="Seu nome">
+			<form>
+				<div class="row">
+					<div class="col-md-6">					
+							<div class="form-group">
+								<label for="nome" class="form-label">Nome:</label>
+								<input type="text" class="form-control w-100" id="nome" placeholder="Seu nome">
+							</div>
+							<div class="form-group">
+								<label for="email" class="form-label">E-mail:</label>
+								<input type="email" class="form-control w-100" id="email" placeholder="digiteseuemail@gmail.com">
+							</div>
+							<div class="form-group">
+								<label for="telefone" class="form-label">Telefone/Whatsapp:</label>
+								<input type="tel" class="form-control w-100" id="telefone" placeholder="(**) *****-****">
+							</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="mensagem" class="form-label">Sua mensagem:</label>
+							<textarea class="form-control w-100" id="mensagem" rows="5" placeholder="Sua mensagem"></textarea>
 						</div>
-						<div class="mb-3">
-							<label for="email" class="form-label">E-mail:</label>
-							<input type="email" class="form-control" id="email" placeholder="digiteseuemail@gmail.com">
-						</div>
-						<div class="mb-3">
-							<label for="telefone" class="form-label">Telefone/Whatsapp:</label>
-							<input type="tel" class="form-control" id="telefone" placeholder="(**) *****-****">
-						</div>
-					</form>
-				</div>
-				<div class="col-md-6">
-					<div class="mb-3">
-						<label for="mensagem" class="form-label">Sua mensagem:</label>
-						<textarea class="form-control" id="mensagem" rows="5" placeholder="Sua mensagem"></textarea>
+					</div>
+
+					<div class="clearfix"></div>
+					<div class="col-lg-12 text-center mt-3">
+						<button class="btn btn-contato botao" type="submit">Enviar mensagem</button>
 					</div>
 				</div>
-			</div>
-			<div class="mb-3 text-center">
-				<button class="btn btn-contato botao" type="submit">Enviar mensagem</button>
-			</div>
+			</form>
 		</div>
 	</section>
 

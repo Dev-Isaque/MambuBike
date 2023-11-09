@@ -18,9 +18,6 @@
 		<meta property="og:description" content="Mobilidade urbana para estruturação do sistema cicloviário no bairro Parque Mambucaba, em Angra dos Reis." />
 		<meta property="og:locale" content="pt_BR">
 
-		<!-- Icon Footer -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
 		<!-- Favicon -->
 		<link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
@@ -56,13 +53,13 @@
 						<a class="nav-link" href="../index.asp">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Sobre</a>
+						<a class="nav-link" href="sobre.asp">Sobre</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link disabled" href="agenda.asp">Agenda</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link disabled" href="participe.asp">Participe</a>
+						<a class="nav-link" href="participe.asp">Participe</a>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="" id="bibliotecaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Biblioteca</a>
@@ -81,7 +78,7 @@
 		</div>
 	</nav>
 	
-	<section class="sobre" style="background-color: #F0F2F5; padding-top: 40px; margin-bottom: -11vh;">
+	<section class="sobre" style="background-color: #F0F2F5; padding-top: 40px;">
         <div class="container py-5 text-center">
 			<div class="moldura card-box-bottom">
 				<h3 class="fw-bold mb-4 card-title-bottom text-uppercase card-box-bottom" style="margin-top: -5vh;"> Sobre o Projeto Mambubike </h3>
@@ -115,28 +112,6 @@
 	<div class="container-seta">
 		<a href="#" class="seta-up" id="linkSetaUp"><img src="../icon/seta-up.svg" alt="" srcset=""></a>
 	</div> 
-
-	<footer class="footer card-box-bottom">
-        <div class="container bottom_border">
-            <div class="row" style="display: flex; justify-content: space-between;">
-				<div class=" col-sm-6 col-md-6 col-sm-6  col-12 col">
-                    <h5 class="headin5_amrc col_white_amrc pt2">Projeto do sistema cicloviário no Parque Mambucaba</h5>
-					                
-					<p class="pb-3"> <span class="material-symbols-outlined" style="vertical-align: middle;"> pin_drop </span> <a href="https://maps.app.goo.gl/WkviiWpUzwAu5yeE8" target="_blank" style="display: inline-block; vertical-align: middle;"> Rua Historiador Alípio Mendes, 156, antigo Fórum, Centro </a> </p>
-					<p class="pb-3"> <span class="material-symbols-outlined" style="vertical-align: middle;">call</span> <a href="tel:+552433771755" target="_blank" style="display: inline-block; vertical-align: middle;"> (24) 3377-1755 </a> </p>
-					<p class="pb-3"> <span class="material-symbols-outlined" style="vertical-align: middle;">mail</span> <a href="mailto:ssp.mobilidade@angra.rj.gov.br" target="_blank" style="display: inline-block; vertical-align: middle;"> ssp.mobilidade@angra.rj.gov.br </a> </p>
-                </div>
-
-                <div class="col-sm-3 col-md-3 col-12 col text-center bg-logo ml-auto">
-					<div style="width: 200px; border-radius: 50%;">
-						<img src="../images/Logo-prefeitura-footer.png" style="height: 70px; width: auto;" alt="">
-					</div>
-            	</div>
-            </div>
-        </div>
-        <br>   
-        <p class="text-center txt-footer">Secretaria executiva de ordem pública e mobilidade Urbana</p>
-    </footer>
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="../scripts.js"></script>
